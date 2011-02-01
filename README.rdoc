@@ -1,0 +1,12 @@
+= ExceptionEngine
+Copyright (C) 2011 Consoci8 Sdn Bhd
+
+The Exception Engine logs your Rails exceptions in your mongodb database and provides a web interface to manage them
+
+It assumes that the main rails application it's mounted to uses devise for authentication
+
+Check Gemfile for other dependencies.
+
+People can view all exceptions at /exceptions
+
+This project uses GPLv3 License.

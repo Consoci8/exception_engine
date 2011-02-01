@@ -1,0 +1,2 @@
+module ExceptionEngine
+end
