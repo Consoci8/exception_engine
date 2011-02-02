@@ -20,3 +20,13 @@ ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
+
+
+class ActiveSupport::TestCase
+  def build_exception
+      raise
+    rescue => caught_exception
+      caught_exception
+  end
+end
+  

@@ -25,6 +25,10 @@ For mongo installation:
 
 http://www.mongodb.org/display/DOCS/Quickstart
 
+After you installed mongodb, make sure you run the mongod server
+
+  $ mongod
+
 
 
 

@@ -8,12 +8,12 @@ module ExceptionEngine
       begin
         response = @app.call(env)
       rescue Exception => raised
-        # TODO - Capture rails app raised error
+        # TODO Figure out how to cleanly store the caught exception
         raise
       end
 
       if env['rack.exception']
-        # TODO - Capture rack exception error
+        # TODO Probably do something clever here
       end
 
       response
