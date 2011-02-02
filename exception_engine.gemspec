@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
   s.version = ExceptionEngine::VERSION.dup
   
+  s.require_paths = ["lib"]
   s.add_dependency("mongoid", "2.0.0.rc.5")
   s.add_dependency("mongo", "1.1.5")
   s.add_dependency("bson_ext", "1.2.0")
