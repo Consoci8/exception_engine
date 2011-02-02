@@ -3,10 +3,30 @@ Copyright (C) 2011 Consoci8 Sdn Bhd
 
 The Exception Engine logs your Rails exceptions in your mongodb database and provides a web interface to manage them
 
-It assumes that the main rails application it's mounted to uses devise for authentication
+It assumes that the main rails application it's mounted to uses devise for authentication and you have mongodb 
+installed and running in your machine
 
-Check Gemfile for other dependencies.
 
-People can view all exceptions at /exceptions
+To use this in your rails engine, add the following line to your gemfile:
+
+  gem "exception_engine", :git => 'git://github.com/Consoci8/exception_engine'
+
+And then run
+  
+  bundle install
+
+
+Next, run your rails server and you can view all your application exceptions at http://localhost:3000/exceptions
+
+
+
+
+For mongo installation:
+
+http://www.mongodb.org/display/DOCS/Quickstart
+
+
+
 
 This project uses GPLv3 License.
+Check Gemfile for other dependencies.
