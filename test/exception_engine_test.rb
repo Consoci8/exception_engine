@@ -28,7 +28,7 @@ class ExceptionMiddlewareTest < ActiveSupport::TestCase
     else
       flunk "Didn't raise an exception"
     end
-
+    
   end
      
   test "deliver an exception in rack.exception" do

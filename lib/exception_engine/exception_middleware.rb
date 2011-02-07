@@ -8,16 +8,14 @@ module ExceptionEngine
       begin
         response = @app.call(env)
       rescue Exception => raised
-        # TODO Figure out how to cleanly store the caught exception
+        ExceptionEngine::Data.store!(raised)
         raise
       end
 
       if env['rack.exception']
-        # TODO Probably do something clever here
+        ExceptionEngine::Data.store!(raised)
       end
-
       response
-      
     end
   end
 end
