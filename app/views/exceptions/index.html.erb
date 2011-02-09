@@ -1,6 +1,17 @@
 <h2>List of Exception</h2>
 <ul>
 <% @exceptions.each do |e| %>
-  <li><%= e.log %></li>
+  <li>Error Class: <%= e.error_class %></li>
+  <li>Error Message: <%= e.error_message %></li>
+  <ul>
+	Backtrace
+  	<li>
+	 <% if !e.backtraces.empty? %>
+	  <% e.backtraces.each do |b| %>
+	    <p><%= b.number%> - <%= b.file %> - <%= b.ruby_method %></p>
+	  <% end %>
+	 <% end %>
+	</li>
+  </ul>
 <% end %>
 </ul>	

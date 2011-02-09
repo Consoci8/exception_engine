@@ -8,12 +8,12 @@ module ExceptionEngine
       begin
         response = @app.call(env)
       rescue Exception => raised
-        ExceptionEngine::Data.store!(raised)
+        ExceptionEngine.exceptionize(raised)
         raise
       end
 
       if env['rack.exception']
-        ExceptionEngine::Data.store!(raised)
+        ExceptionEngine.exceptionize(raised)
       end
       response
     end

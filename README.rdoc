@@ -34,3 +34,8 @@ After you installed mongodb, make sure you run the mongod server
 
 This project uses GPLv3 License.
 Check Gemfile for other dependencies.
+
+Credits: 
+
+1. José Valim for enginex
+2. Thoughtbot's HoptoadNotifier gem

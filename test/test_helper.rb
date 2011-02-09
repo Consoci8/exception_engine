@@ -23,6 +23,8 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 # Helper methods
 class ActiveSupport::TestCase
+  setup { ExceptionEngine::Data.delete_all }
+  
   # Creates RunTimeError
   def build_exception
       raise
