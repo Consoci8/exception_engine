@@ -3,8 +3,7 @@ Copyright (C) 2011 Consoci8 Sdn Bhd
 
 The Exception Engine logs your Rails exceptions in your mongodb database and provides a web interface to manage them
 
-It assumes that the main rails application it's mounted to uses devise for authentication and you have mongodb 
-installed and running in your machine
+It assumes you have mongodb installed and running in your machine
 
 
 To use this in your rails engine, add the following line to your gemfile:
@@ -16,7 +15,29 @@ And then run
   bundle install
 
 
-Next, run your rails server and you can view all your application exceptions at http://localhost:3000/exceptions
+Setup authentication:
+
+Define a exception_engine_authentication method in ApplicationController:
+
+  # app/controllers/application_controller.rb
+
+  def exception_engine_authentication
+    # authentication_logic_goes_here
+  end
+
+
+For example, if you are using the Devise gem and have an Admin model:
+
+  # app/controllers/application_controller.rb
+
+  def exception_engine_authentication
+    authenticate_admin!
+  end
+
+
+View the exceptions interface:
+
+   open http://localhost:3000/exceptions
 
 
 
@@ -39,3 +60,8 @@ Credits:
 
 1. José Valim for enginex
 2. Thoughtbot's HoptoadNotifier gem
+
+
+TODO
+
+1. Needs pretty UI
