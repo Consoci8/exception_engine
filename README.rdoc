@@ -8,7 +8,7 @@ It assumes you have mongodb installed and running in your machine
 
 To use this in your rails engine, add the following line to your gemfile:
 
-  gem "exception_engine", :git => 'git://github.com/Consoci8/exception_engine'
+  gem "exception_engine"
 
 And then run
   
