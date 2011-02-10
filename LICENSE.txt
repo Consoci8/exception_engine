@@ -1,14 +1,14 @@
-Engineworks 
+ExceptionEngine 
 Copyright (C) 2011 Consoci8 Sdn Bhd
 
-This file is part of Engineworks.
+This file is part of ExceptionEngine.
 
-Engineworks is free software: you can redistribute it and/or modify
+ExceptionEngine is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-Engineworks is distributed in the hope that it will be useful,
+ExceptionEngine is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.

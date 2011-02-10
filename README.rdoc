@@ -1,7 +1,7 @@
 = ExceptionEngine
 Copyright (C) 2011 Consoci8 Sdn Bhd
 
-The Exception Engine logs your Rails exceptions in your mongodb database and provides a web interface to manage them
+The ExceptionEngine logs your Rails exceptions in your mongodb database and provides a web interface to manage them
 
 It assumes you have mongodb installed and running in your machine
 
@@ -17,7 +17,7 @@ And then run
 
 Setup authentication:
 
-Define a exception_engine_authentication method in ApplicationController:
+Define an exception_engine_authentication method in ApplicationController:
 
   # app/controllers/application_controller.rb
 
@@ -37,7 +37,7 @@ For example, if you are using the Devise gem and have an Admin model:
 
 View the exceptions interface:
 
-   open http://localhost:3000/exceptions
+  http://localhost:3000/exceptions
 
 
 
@@ -55,6 +55,7 @@ After you installed mongodb, make sure you run the mongod server
 
 This project uses GPLv3 License.
 Check Gemfile for other dependencies.
+
 
 Credits: 
 
