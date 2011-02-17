@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Muhammad Fadhli Rahim"]
   s.email       = "fadhlirahim@gmail.com"
    
-  s.files = Dir["lib/**/*"] + ["Gemfile", "Gemfile.lock", "GPLv3.txt", "LICENSE.txt", "Rakefile", "README.rdoc"]
+  s.files = Dir["lib/**/*"] + ["Gemfile", "Gemfile.lock", "GPLv3.txt", "LICENSE.txt", "Rakefile", "README.rdoc"] + ["app/**/*"] + ["config/routes.rb"]
   s.test_files = Dir["test/**/*"]
   s.version = ExceptionEngine::VERSION.dup
   
