@@ -9,7 +9,7 @@ module ExceptionEngine
         response = @app.call(env)
       rescue Exception => raised
         ExceptionEngine.exceptionize(raised)
-        raise
+        raise(raised)
       end
 
       if env['rack.exception']
