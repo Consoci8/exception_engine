@@ -18,7 +18,7 @@
 		  <div id='backtrace'>
 	  		<% if !e.backtraces.empty? %>
 		  	  <% e.backtraces.each do  |b| %>
-		        <%= b.number%> - <%= b.file %> - <%= b.ruby_method %><br />
+		        <%= b.file %>:<%= b.line_num %> in <%= b.ruby_method %><br />
 		      <% end %>
 	        <% end %>
 		  </div>

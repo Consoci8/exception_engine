@@ -1,8 +1,8 @@
-require "exception_engine/engine"
-require "exception_engine/exception_middleware"
+require "mongoid"
 require "exception_engine/backtrace"
 require "exception_engine/notice"
-require "mongoid"
+require "exception_engine/exception_middleware"
+require "exception_engine/engine"
 
 # We are required to choose a database name
 Mongoid.configure do |config|

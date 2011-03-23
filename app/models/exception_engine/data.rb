@@ -16,8 +16,16 @@ module ExceptionEngine
     def parse(notice)
       self.error_class = notice.error_class 
       self.error_message = notice.error_message
-      notice.backtrace.lines.each do | line | 
-        self.backtraces << ExceptionEngine::BacktraceData.new(:number => line.number, :file => line.file, :ruby_method => line.method) if !line.nil?
+      if !notice.backtrace.lines.empty?
+        notice.backtrace.lines.each do | line | 
+          if !line.nil?
+            b             = ExceptionEngine::BacktraceData.new
+            b.line_num    = line.number
+            b.file        = line.file
+            b.ruby_method = line.method
+            self.backtraces << b
+          end
+        end
       end
       self.created_at = Time.now.utc
     end
